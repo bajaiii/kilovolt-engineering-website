@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imperial - Careers</title>
+    <title>Kilovolt Engineering - Careers</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        /* Accent color */
+        .accent {
+            color: #6dcff6;
+        }
+        .accent-border {
+            border: 2px solid #6dcff6;
+            padding: 1em;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+
         /* Global Styles */
         * {
             margin: 0;
@@ -25,7 +36,6 @@
         header {
             background-color: #ffffff;
             color: #333;
-            text-align: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,9 +44,7 @@
 
         .logo {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            text-align: left;
         }
 
         .logo img {
@@ -54,26 +62,64 @@
         .logo p {
             font-size: 1em;
             margin: 0;
+            color: #6dcff6;
         }
 
         /* Navigation Styles */
         nav {
             display: flex;
-            justify-content: space-between;
+            gap: 1rem;
         }
         nav a {
             color: #333;
             padding: 10px 20px;
             text-decoration: none;
+            position: relative;
         }
         nav a:hover {
-            background-color: #f1f1f1;
+            color: #6dcff6;
+        }
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 2px;
+            height: 2px;
+            background-color: #6dcff6;
         }
 
         /* Main Content Styles */
         main {
             padding: 3em 10%;
             color: #333;
+        }
+        main h2.accent {
+            color: #6dcff6;
+            margin-bottom: 0.5em;
+        }
+
+        /* Form Styles */
+        fieldset {
+            margin-top: 1em;
+        }
+        legend {
+            font-weight: bold;
+            color: #6dcff6;
+        }
+        form input[type="file"] {
+            margin-bottom: 1em;
+        }
+        form button {
+            background-color: #6dcff6;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        form button:hover {
+            background-color: #4fb0d4;
         }
 
         /* Footer Styles */
@@ -92,17 +138,17 @@
             cursor: pointer;
         }
         .social-icons i:hover {
-            color: #f1f1f1;
+            color: #6dcff6;
         }
     </style>
-<script>
+    <script>
         $(document).ready(function() {
-            $('form').submit(function(e) {
-                e.preventDefault(); // Prevent the default form submission
+            $('#uploadForm').submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
                 var formData = new FormData(this);
 
                 $.ajax({
-                    url: "{{ url_for('upload_file') }}",
+                    url: 'upload_file',  // Adjust if you have a different endpoint
                     type: 'POST',
                     data: formData,
                     success: function(data) {
@@ -119,38 +165,41 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./static/image1.jpg" alt="Imperial Logo">  
+            <img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo">
             <div>
-                <h1>Imperial</h1>
-                <p>Innovating the Future of Power Engineering</p>
+                <h1>Kilovolt</h1>
+                <p class="accent">Innovating the Future of Power Engineering</p>
             </div>
         </div>
         <nav>
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('about') }}">About Us</a>
-            <a href="{{ url_for('services') }}">Our Services</a>
-            <a href="{{ url_for('projects') }}">Projects</a>
-            <a href="{{ url_for('careers') }}">Careers</a>
-            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
+
     <main>
-    <h2>Careers</h2>
-<p>Currently, there are no career opportunities available. We are a growing company and encourage you to check back at a later date for possible openings.</p>
-    <p>If you'd like to submit your resume for future consideration, please use the form below:</p>
-    <br>
-    <fieldset>
+        <h2 class="accent">Careers</h2>
+        <p>Currently, there are no career opportunities available. We are a growing company and encourage you to check back at a later date for possible openings.</p>
+        <p>If you'd like to submit your resume for future consideration, please use the form below:</p>
+        
+        <fieldset class="accent-border">
             <legend>Upload Resume</legend>
-            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="uploadForm">
+            <form action="upload_file" method="post" enctype="multipart/form-data" id="uploadForm">
                 <input type="file" name="file" accept=".pdf,.doc,.docx" required>
+                <br>
                 <button type="submit">Upload</button>
             </form>
         </fieldset>
-	<div id="message"></div>
-</main>
+        <div id="message"></div>
+    </main>
+
     <footer>
-        <p>Copyright © 2023, Imperial Engineering LLC. All rights reserved.</p>
-       <div class="social-icons">
+        <p>Copyright © 2023, Kilovolt Engineering LLC. All rights reserved.</p>
+        <div class="social-icons">
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-linkedin fa-2x"></i>
         </div>
