@@ -20,7 +20,7 @@
     /* ===== HEADER ===== */
     header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1em 10%;position:relative;}
     .logo{display:flex;align-items:center;gap:1rem;flex:1 0 auto;}
-    .logo img{max-width:90px;height:auto;}
+    .logo img{max-width:90px;height:auto;cursor:pointer;}
     .logo h1{font-size:2.1em;letter-spacing:.15em;text-transform:uppercase;}
     .logo p{color:var(--accent);font-size:.95em;}
 
@@ -66,7 +66,8 @@
   <!-- ===== HEADER ===== -->
   <header>
     <div class="logo">
-      <img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo">
+      <!-- logo now links home -->
+      <a href="#home"><img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo"></a>
       <div>
         <h1>Kilovolt</h1>
         <p class="accent">Innovating the Future of Power Engineering</p>
@@ -92,16 +93,15 @@
     <!-- HOME -->
     <section id="home" class="active">
       <h2 class="accent">Welcome to Kilovolt Engineering</h2>
-      <p>We combine 30&nbsp;years of collective experience in engineering and distribution-line construction. Our mission is to deliver top-tier, innovative solutions—setting new benchmarks in quality and customer satisfaction throughout the industry.</p>
+      <p>Led by a Registered Professional Engineer with multi-state licensure, Kilovolt pairs field-tested insight with advanced analytics to deliver power-system solutions that stand the test of time. From 120 V facility upgrades to 115 kV substation commissioning, we bridge design and operations so your project performs—day one and decade ten.</p>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
       <h2 class="accent">About Us</h2>
-      <p>Kilovolt Engineering, founded in 2021 and headquartered in Warner Robins, Georgia, specializes in all facets of distribution engineering up to&nbsp;25 kV. What sets us apart is our hands-on field experience and deep understanding of real-world electrical challenges.</p>
-      <p>Our founders bring together an exceptional 30 years of expertise in the power industry, focusing on MV planning, troubleshooting, protective-device coordination, sectionalizing studies, and field inspections.</p>
-      <p>We have successfully completed several USDA RUS work plans for rural utilities—most recently a plan valued at ≈ $100 million—and manage engineering operations for fleets of over 50 substations and 200 feeder circuits.</p>
-      <p>Our mission is to provide engineering solutions that stand up to the highest industry standards for quality and reliability.</p>
+      <p>Kilovolt Engineering was founded in 2021 in Georgia to offer <strong>practical, code-compliant distribution and SCADA expertise</strong> up to 25 kV, with proven experience integrating at 46 kV and 115 kV interties. Our leadership holds an M.S. in Future Power Networks from Imperial College London, PE licenses in multiple states, and hands-on knowledge of NEC, NESC, IEEE 1366, and RUS bulletins.</p>
+
+      <p>We routinely program SEL relays, model entire cooperatives in Milsoft WindMil, and deploy distribution automation schemes encompassing hundreds of IEDs. Whether you need a feasibility study for a fast-growing industrial load, RTAC-driven DA restoration, or turnkey commissioning of a green-field substation, Kilovolt delivers.</p>
     </section>
 
     <!-- SERVICES -->
@@ -111,70 +111,70 @@
       <div class="accent-border">
         <h3 class="accent">Inspection &amp; Field Services</h3>
         <ul>
-          <li>Meticulous RUS work-order inspection reports verified by Professional Engineer (P.E.) in several states</li>
-          <li>Thorough pad-mount and underground infrastructure inspections and write-ups</li>
-          <li>Comprehensive asset inventory assessments</li>
-          <li>Quick-response storm damage analysis</li>
-          <li>Power-Line Radio Frequency Interference (RFI) locating and reports</li>
-          <li>Troubleshooting—With over 15&nbsp;years of service-truck and construction-truck experience up to 25 kV, we excel in solving complex electrical problems</li>
-          <li>Pole-ground &amp; electrical-service-ground resistance measurements</li>
+          <li>Meticulous RUS work-order inspections verified by P.E.</li>
+          <li>Pad-mount &amp; underground infrastructure audits</li>
+          <li>Comprehensive asset inventories and storm-damage assessments</li>
+          <li>Power-line RFI locating, stray-voltage investigations, and surge-arrester diagnostics</li>
+          <li>15 + years of bucket-truck &amp; construction-crew experience—troubleshooting to 25 kV</li>
+          <li>Pole-ground &amp; service-ground resistance testing</li>
         </ul>
       </div>
 
       <div class="accent-border">
-        <h3 class="accent">Distribution Engineering Analysis &amp; Planning Services</h3>
+        <h3 class="accent">Distribution Engineering&nbsp;&amp; Planning</h3>
         <ul>
-          <li>Intricate system modeling and simulations</li>
-          <li>Conductor, transformer, and equipment sizing</li>
-          <li>Completion of RUS technical work plans</li>
-          <li>Power-factor fine-tuning and analysis—capacitor sizing to improve power factor</li>
-          <li>Specialized in distribution feeder/circuit coordination up to 25 kV</li>
-          <li>Proficiency in Schweitzer relay settings (351S and 651R), fuse sizing, and oil-circuit-recloser (OCR) sizing and curve selection</li>
-          <li>Expertise in Hubbell Versa-Tech settings, TripSaver configurations, and VWVE parameters</li>
-          <li>NEC &amp; NESC code interpretation and research</li>
-          <li>Professional Engineering (P.E.) services and stamped documentation</li>
-          <li>Creation of Python or Excel VBA models to analyze historical outage data from OMS SQL databases</li>
-          <li>Development of Distribution Specifications</li>
-          <li>Parking-lot, roadway, and substation lighting studies with photometric design</li>
+          <li>Load-flow, short-circuit, and voltage-profile simulations in WindMil &amp; DIgSILENT</li>
+          <li>Conductor, transformer, and equipment sizing, plus full RUS technical work plans</li>
+          <li>Protection coordination (<em>351S, 651-R, fuses, reclosers</em>) and arc-flash studies</li>
+          <li>EV fast-charging &amp; fleet-depot infrastructure—from 250 kW chargers to 2.5 MVA substations</li>
+          <li>Substation siting, justification, and commissioning up to 115 kV / 41.7 MVA</li>
+          <li>Outage-data analytics (SAIDI/SAIFI dashboards) using custom VBA &amp; SQL</li>
+          <li>IEEE 519 harmonic reviews, NEC/NESC code interpretation, photometric lighting studies</li>
         </ul>
       </div>
 
       <div class="accent-border">
-        <h3 class="accent">SCADA Services</h3>
+        <h3 class="accent">SCADA &amp; Automation</h3>
         <ul>
-          <li>Design and configuration of SCADA RTUs/RTACs and communication networks</li>
-          <li>Commissioning new Intelligent Electronic Devices&nbsp;(IEDs)</li>
-          <li>Integration of new substations into existing SCADA systems</li>
-          <li>SCADA HMI design and custom dashboard development for real-time monitoring</li>
-          <li>Telemetry installation and testing (DNP3, IEC&nbsp;61850, Modbus)</li>
-          <li>Firmware updates for RTUs/RTACs</li>
-          <li>Training and technical support for operations staff on SCADA platforms</li>
+          <li>RTAC &amp; gateway programming, DNP3 / IEC 61850 / Modbus integration</li>
+          <li>Distribution automation schemes with centralized fault isolation &amp; service restoration</li>
+          <li>Rotational load-shed (RLS) algorithms to meet utility curtailment mandates</li>
+          <li>Custom Survalent HMI dashboards and historian KPIs</li>
+          <li>Firmware lifecycle management and operator training</li>
         </ul>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
-      <h2 class="accent">Projects</h2>
-      <p>Here are a few highlights:</p>
+      <h2 class="accent">Representative Projects</h2>
       <ul>
-        <li><strong>USDA RUS Work Plan (2023):</strong> $100 M rural-utility upgrade</li>
-        <li><strong>Substation Automation:</strong> DNP3 SCADA integration across 12 substations</li>
-        <li><strong>Distribution Expansion:</strong> Engineered 25 kV line extensions for three Georgia cooperatives</li>
+        <li><strong>41.7 MVA 115 kV/12.47 kV Substation (2023).</strong> Lead protection &amp; SCADA commissioning—including permissive, mirrored-bits scheme to prevent double-circuit miscoordination.</li>
+
+        <li><strong>System-wide Distribution Automation Deployment (2021-24).</strong> Programmed &amp; commissioned 240 + reclosers and 150 + breaker relays under an RTAC-driven centralized controller, boosting reliability KPIs by double-digit percentages.</li>
+
+        <li><strong>EV Fast-Charging Rollouts.</strong> Engineered transformer sizing, utility coordination, and construction support for multiple 250 kW DCFC sites and a 5-charger electric-bus depot—delivering energized sites on schedule.</li>
+
+        <li><strong>Rotational Load-Shed Integration.</strong> Implemented Survalent RLS module enabling automated 50 MW curtailments in 15-minute rotations—compliant with supplier directives.</li>
+
+        <li><strong>Feeder Reliability Analytics.</strong> Built VBA/SQL tool that converts raw OMS data into SAIDI/SAIFI heat-maps, guiding CAPEX toward the worst-performing circuits and saving manual analysis hours every month.</li>
+
+        <li><strong>Medium-Voltage Reconductor &amp; Voltage-Regulation Study.</strong> Modeled 14 spans of #6 AWG replacement and regulator upsizing to unlock 2 MW of plant expansion with full ampacity margin.</li>
+
+        <li><strong>Campus-wide Fire-Alarm Power Upgrade.</strong> Tested 22 FACPs for NFPA 72 compliance—smoke initiation, battery supervision, loop integrity—issuing actionable punch-list for contractor closeout.</li>
       </ul>
     </section>
 
     <!-- CAREERS -->
     <section id="careers">
       <h2 class="accent">Careers</h2>
-      <p>We have no open positions at this time. If you’d like to submit your resume for future consideration, please email
-         <strong>kilovoltengineering@gmail.com</strong>.</p>
+      <p>We are not hiring at this moment, but we’re always eager to meet talented power-system professionals. Send a résumé and brief note to <strong>kilovoltengineering@gmail.com</strong>, and we’ll keep it on file for upcoming opportunities.</p>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
       <h2 class="accent">Contact Us</h2>
-      <p>For more information, please get in touch:</p>
+      <p>Let’s discuss how Kilovolt can accelerate your next project.</p>
       <form action="mailto:kilovoltengineering@gmail.com" method="POST" enctype="text/plain">
         <label for="name">Name:</label>
         <input type="text" id="name" name="Name" required>
@@ -192,7 +192,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2023 Kilovolt Engineering LLC. All rights reserved.</p>
+    <p>&copy; 2023 – 2025 Kilovolt Engineering LLC. All rights reserved.</p>
     <div class="social-icons">
       <i class="fab fa-facebook fa-2x"></i>
       <i class="fab fa-linkedin fa-2x"></i>
@@ -222,12 +222,11 @@
         showSection(id);
         history.pushState(null,'','#'+id);
         window.scrollTo({top:0,behavior:'smooth'});
-        /* close mobile menu after selection */
-        nav.classList.remove('open');
+        nav.classList.remove('open'); // close mobile menu
       });
     });
 
-    /* back/forward browser buttons */
+    /* back/forward buttons */
     window.addEventListener('popstate', () =>
       showSection(location.hash.slice(1) || 'home')
     );
