@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imperial - Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 10%;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+        }
+
+        .logo img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .logo h1 {
+            font-size: 2.5em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .logo p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 3em 10%;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+            font-size: 0.9em;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons i {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .social-icons i:hover {
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./static/image1.jpg" alt="Imperial Logo">  
+            <div>
+                <h1>Imperial</h1>
+                <p>Innovating the Future of Power Engineering</p>
+            </div>
+        </div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('services') }}">Our Services</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('careers') }}">Careers</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Projects</h2>
+        <p>Here are some of the projects we've worked on:</p>
+        <!-- Your list of projects can go here -->
+    </main>
+    <footer>
+        <p>Copyright © 2023, Imperial Engineering LLC. All rights reserved.</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-linkedin fa-2x"></i>
+        </div>
+    </footer>
+</body>
+</html>
