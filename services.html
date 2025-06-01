@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Imperial - Our Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kilovolt Engineering - Our Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        /* Accent color */
+        .accent {
+            color: #6dcff6;
+        }
+        .accent-border {
+            border-left: 4px solid #6dcff6;
+            padding-left: 1em;
+            margin-top: 1em;
+        }
+
         /* Global Styles */
         * {
             margin: 0;
@@ -22,57 +32,88 @@
         }
 
         /* Header Styles */
-header {
-    background-color: #ffffff;
-    color: #333;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 10%;
-}
+        header {
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 10%;
+        }
 
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;  /* Add this line */
-}
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
-.logo img {
-    max-width: 100px; /* Increase the max-width */
-    margin-right: 20px;
-}
+        .logo img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
 
-.logo h1 {
-    font-size: 2.5em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin: 0;  /* Set top and bottom margins to 0 */
-}
+        .logo h1 {
+            font-size: 2.5em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin: 0;
+        }
 
-.logo p {
-    font-size: 1em;
-    margin: 0;  /* Corrected */
-}
+        .logo p {
+            font-size: 1em;
+            margin: 0;
+            color: #6dcff6;
+        }
+
         /* Navigation Styles */
         nav {
             display: flex;
-            justify-content: space-between;
+            gap: 1rem;
         }
         nav a {
             color: #333;
             padding: 10px 20px;
             text-decoration: none;
+            position: relative;
         }
         nav a:hover {
-            background-color: #f1f1f1;
+            color: #6dcff6;
+        }
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 2px;
+            height: 2px;
+            background-color: #6dcff6;
         }
 
         /* Main Content Styles */
         main {
             padding: 3em 10%;
             color: #333;
+        }
+        main h2 {
+            margin-bottom: 0.5em;
+        }
+        main h2.accent {
+            color: #6dcff6;
+        }
+        main h3 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-size: 1.5em;
+            color: #333;
+        }
+        main h3.accent {
+            color: #6dcff6;
+        }
+        main ul {
+            margin-left: 1.5em;
+            list-style-type: disc;
+        }
+        main li {
+            margin-bottom: 0.5em;
         }
 
         /* Footer Styles */
@@ -91,63 +132,63 @@ header {
             cursor: pointer;
         }
         .social-icons i:hover {
-            color: #f1f1f1;
+            color: #6dcff6;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./static/image1.jpg" alt="Imperial Logo">  
+            <img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo">
             <div>
-                <h1>Imperial</h1>
+                <h1>Kilovolt</h1>
                 <p>Innovating the Future of Power Engineering</p>
             </div>
         </div>
         <nav>
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('about') }}">About Us</a>
-            <a href="{{ url_for('services') }}">Our Services</a>
-            <a href="{{ url_for('projects') }}">Projects</a>
-            <a href="{{ url_for('careers') }}">Careers</a>
-            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <h2>Our Services</h2>
-	<br>
-        <h3>Inspection & Field Services</h3>
-        <ul>
-            <li>Meticulous RUS work order inspection reports verified by Professional Engineer (P.E.) in several states</li>
-            <li>Thorough pad mount and underground infrastructure inspections and write-ups</li>
-            <li>Comprehensive asset inventory assessments</li>
-            <li>Quick-response storm damage analysis</li>
-            <li>Power Line Radio Frequency Interference (RFI) Locating and Reports</li>
-            <li>Troubleshooting - With over 15 years of service truck and construction truck experience up to 25kV, we have significant experience in troubleshooting and solving electrical problems</li>
-	     <li>Pole ground & electrical service ground resistance measurements </li>
-	
+        <h2 class="accent">Our Services</h2>
+        <div class="accent-border">
+            <h3 class="accent">Inspection & Field Services</h3>
+            <ul>
+                <li>Meticulous RUS work order inspection reports verified by Professional Engineer (P.E.) in several states</li>
+                <li>Thorough pad mount and underground infrastructure inspections and write-ups</li>
+                <li>Comprehensive asset inventory assessments</li>
+                <li>Quick-response storm damage analysis</li>
+                <li>Power Line Radio Frequency Interference (RFI) locating and reports</li>
+                <li>Troubleshooting—With over 15 years of service truck and construction truck experience up to 25kV, we excel in solving complex electrical problems</li>
+                <li>Pole ground & electrical service ground resistance measurements</li>
+            </ul>
+        </div>
 
-        </ul>
-	<br>
-
-        <h3>Distribution Engineering Analysis & Planning Services</h3>
-        <ul>
-            <li>Intricate system modeling and simulations</li>
-            <li>Conductor, transformer and equipment sizing</li>
-            <li>Completion of RUS technical work plan</li>
-            <li>Power factor fine-tuning and analysis - Capacitor sizing to improve power factor </li>
-            <li>Specialized in distribution feeder/ circuit coordination up to 25kV</li>
-            <li>Proficiency in Schweitzer relay settings (351S and 651R), fuse sizing, and oil circuit recloser (OCR) sizing and curve selection</li>
-            <li>Expertise in Hubbell Versa-Tech settings, TripSaver configurations, and VWVE parameters</li>
-            <li>NEC & NESC code interpretation and research</li>
-            <li>Professional Engineering (P.E) Services</li>
-            <li>Creation of Python or Excel VBA model to analyze historical outage data from OMS SQL database</li>
-            <li>Creation of Distribution Specifications</li>
-            <li>Parking lot, roadway, and substation lighting studies and photometric design</li>
-        </ul>
+        <div class="accent-border">
+            <h3 class="accent">Distribution Engineering Analysis & Planning Services</h3>
+            <ul>
+                <li>Intricate system modeling and simulations</li>
+                <li>Conductor, transformer, and equipment sizing</li>
+                <li>Completion of RUS technical work plans</li>
+                <li>Power factor fine-tuning and analysis—capacitor sizing to improve power factor</li>
+                <li>Specialized in distribution feeder/circuit coordination up to 25kV</li>
+                <li>Proficiency in Schweitzer relay settings (351S and 651R), fuse sizing, and oil circuit recloser (OCR) sizing and curve selection</li>
+                <li>Expertise in Hubbell Versa-Tech settings, TripSaver configurations, and VWVE parameters</li>
+                <li>NEC & NESC code interpretation and research</li>
+                <li>Professional Engineering (P.E.) services and stamped documentation</li>
+                <li>Creation of Python or Excel VBA models to analyze historical outage data from OMS SQL databases</li>
+                <li>Development of Distribution Specifications</li>
+                <li>Parking lot, roadway, and substation lighting studies with photometric design</li>
+            </ul>
+        </div>
     </main>
     <footer>
-        <p>Copyright © 2023, Imperial Engineering LLC. All rights reserved.</p>
+        <p>Copyright © 2023, Kilovolt Engineering LLC. All rights reserved.</p>
         <div class="social-icons">
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-linkedin fa-2x"></i>
