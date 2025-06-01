@@ -31,8 +31,8 @@
 
     /* ===== SECTION LAYOUT ===== */
     main{padding:3em 10%;}
-    section{display:none;max-width:1000px;margin:0 auto;}
-    section.active{display:block;}
+    section{display:none;max-width:1000px;margin:0 auto;}  /* hide all by default */
+    section.active{display:block;}                           /* show active */
 
     h2{margin-bottom:.5em;}
     .accent{color:var(--accent);}
@@ -71,17 +71,17 @@
     <!-- HOME -->
     <section id="home" class="active">
       <h2 class="accent">Welcome to Kilovolt Engineering</h2>
-      <p>We combine 30 years of collective experience in engineering and distribution-line construction. Our mission is to deliver top-tier, innovative solutions—setting new benchmarks in quality
+      <p>We combine 30&nbsp;years of collective experience in engineering and distribution-line construction. Our mission is to deliver top-tier, innovative solutions—setting new benchmarks in quality
          and customer satisfaction throughout the industry.</p>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
       <h2 class="accent">About Us</h2>
-      <p>Kilovolt Engineering, founded in 2021 and headquartered in Warner Robins, Georgia, specializes in all facets of distribution engineering up to 25 kV. What sets us apart is our hands-on field
+      <p>Kilovolt Engineering, founded in 2021 and headquartered in Warner Robins, Georgia, specializes in all facets of distribution engineering up to&nbsp;25 kV. What sets us apart is our hands-on field
          experience and deep understanding of real-world electrical challenges.</p>
-      <p>Our founders bring together an exceptional 30 years of expertise in the power industry, focusing on MV planning, troubleshooting, protective-device coordination, sectionalizing studies, and field inspections.</p>
-      <p>We have successfully completed several USDA RUS work plans for rural utilities—most recently a plan valued at ≈ $100 million—and manage engineering operations for fleets of over 50 substations and 200 feeder circuits.</p>
+      <p>Our founders bring together an exceptional 30&nbsp;years of expertise in the power industry, focusing on MV planning, troubleshooting, protective-device coordination, sectionalizing studies, and field inspections.</p>
+      <p>We have successfully completed several USDA RUS work plans for rural utilities—most recently a plan valued at ≈ $100 million—and manage engineering operations for fleets of over&nbsp;50 substations and&nbsp;200 feeder circuits.</p>
       <p>Our mission is to provide engineering solutions that stand up to the highest industry standards for quality and reliability.</p>
     </section>
 
@@ -96,6 +96,118 @@
           <li>Thorough pad-mount and underground infrastructure inspections and write-ups</li>
           <li>Comprehensive asset inventory assessments</li>
           <li>Quick-response storm-damage analysis</li>
-          <li>Power Line Radio Frequency Interference (RFI) locating and reports</li>
-          <li>Troubleshooting—With over 15&nbsp;years of service-truck and construction-truck experience up to 25 kV, we excel in solving complex electrical problems</li>
-          <li>
+          <li>Power-Line Radio Frequency Interference (RFI) locating and reports</li>
+          <li>Troubleshooting—With over 15&nbsp;years of service-truck and construction-truck experience up to&nbsp;25 kV, we excel in solving complex electrical problems</li>
+          <li>Pole-ground &amp; electrical-service-ground resistance measurements</li>
+        </ul>
+      </div>
+
+      <div class="accent-border">
+        <h3 class="accent">Distribution Engineering Analysis &amp; Planning Services</h3>
+        <ul>
+          <li>Intricate system modeling and simulations</li>
+          <li>Conductor, transformer, and equipment sizing</li>
+          <li>Completion of RUS technical work plans</li>
+          <li>Power-factor fine-tuning and analysis—capacitor sizing to improve power factor</li>
+          <li>Specialized in distribution feeder/circuit coordination up to&nbsp;25 kV</li>
+          <li>Proficiency in Schweitzer relay settings (351S and 651R), fuse sizing, and oil-circuit-recloser (OCR) sizing and curve selection</li>
+          <li>Expertise in Hubbell Versa-Tech settings, TripSaver configurations, and VWVE parameters</li>
+          <li>NEC &amp; NESC code interpretation and research</li>
+          <li>Professional Engineering (P.E.) services and stamped documentation</li>
+          <li>Creation of Python or Excel VBA models to analyze historical outage data from OMS SQL databases</li>
+          <li>Development of Distribution Specifications</li>
+          <li>Parking-lot, roadway, and substation lighting studies with photometric design</li>
+        </ul>
+      </div>
+
+      <div class="accent-border">
+        <h3 class="accent">SCADA Services</h3>
+        <ul>
+          <li>Design and configuration of SCADA RTUs/RTACs and communication networks</li>
+          <li>Commissioning new Intelligent Electronic Devices&nbsp;(IEDs)</li>
+          <li>Integration of new substations into existing SCADA systems</li>
+          <li>SCADA HMI design and custom dashboard development for real-time monitoring</li>
+          <li>Telemetry installation and testing (DNP3, IEC&nbsp;61850, Modbus)</li>
+          <li>Firmware updates for RTUs/RTACs</li>
+          <li>Training and technical support for operations staff on SCADA platforms</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="accent">Projects</h2>
+      <p>Here are a few highlights:</p>
+      <ul>
+        <li><strong>USDA RUS Work Plan (2023):</strong> $100 M rural-utility upgrade</li>
+        <li><strong>Substation Automation:</strong> DNP3 SCADA integration across 12 substations</li>
+        <li><strong>Distribution Expansion:</strong> Engineered 25 kV line extensions for three Georgia cooperatives</li>
+      </ul>
+    </section>
+
+    <!-- CAREERS -->
+    <section id="careers">
+      <h2 class="accent">Careers</h2>
+      <p>We have no open positions at this time. If you’d like to submit your resume for future consideration, please email
+         <strong>kilovoltengineering@gmail.com</strong>.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="accent">Contact Us</h2>
+      <p>For more information, please get in touch:</p>
+      <form action="mailto:kilovoltengineering@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2023 Kilovolt Engineering LLC. All rights reserved.</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook fa-2x"></i>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </div>
+  </footer>
+
+  <!-- ===== SIMPLE PAGE SWITCHER ===== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = [...document.querySelectorAll('main section')];
+
+    function showSection(id = 'home') {
+      sections.forEach(sec => sec.classList.toggle('active', sec.id === id));
+    }
+
+    /* Initial load (e.g., /#services) */
+    showSection(location.hash.slice(1) || 'home');
+
+    /* Nav clicks */
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.hash.slice(1);          // #services → services
+        showSection(id);
+        history.pushState(null, '', '#'+id);     // update URL for back/forward
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+    });
+
+    /* Back / forward buttons */
+    window.addEventListener('popstate', () =>
+      showSection(location.hash.slice(1) || 'home')
+    );
+  });
+  </script>
+</body>
+</html>
