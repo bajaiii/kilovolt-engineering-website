@@ -1,208 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kilovolt Engineering - Careers</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        /* Accent color */
-        .accent {
-            color: #6dcff6;
-        }
-        .accent-border {
-            border: 2px solid #6dcff6;
-            padding: 1em;
-            border-radius: 5px;
-            margin-top: 1em;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kilovolt Engineering – Careers</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Accent color */
+    .accent {
+      color: #6dcff6;
+    }
+    .accent-bg {
+      background-color: #6dcff6;
+      color: #fff;
+    }
+    .accent-border {
+      border: 2px solid #6dcff6;
+      border-radius: 4px;
+      padding: 1em;
+      margin-top: 1em;
+    }
 
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Raleway', sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.6;
-        }
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        /* Header Styles */
-        header {
-            background-color: #ffffff;
-            color: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 10%;
-        }
+    /* Header Styles */
+    header {
+      background-color: #ffffff;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 10%;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-        .logo img {
-            max-width: 100px;
-            margin-right: 20px;
-        }
+    .logo img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
 
-        .logo h1 {
-            font-size: 2.5em;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin: 0;
-        }
+    .logo h1 {
+      font-size: 2.5em;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin: 0;
+    }
 
-        .logo p {
-            font-size: 1em;
-            margin: 0;
-            color: #6dcff6;
-        }
+    /* Tagline in accent color */
+    .logo p {
+      font-size: 1em;
+      margin: 0;
+      color: #6dcff6;
+    }
 
-        /* Navigation Styles */
-        nav {
-            display: flex;
-            gap: 1rem;
-        }
-        nav a {
-            color: #333;
-            padding: 10px 20px;
-            text-decoration: none;
-            position: relative;
-        }
-        nav a:hover {
-            color: #6dcff6;
-        }
-        nav a:hover::after {
-            content: '';
-            position: absolute;
-            left: 10px;
-            right: 10px;
-            bottom: 2px;
-            height: 2px;
-            background-color: #6dcff6;
-        }
+    /* Navigation Styles */
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      color: #333;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: relative;
+    }
+    nav a:hover {
+      color: #6dcff6;
+    }
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 2px;
+      height: 2px;
+      background-color: #6dcff6;
+    }
 
-        /* Main Content Styles */
-        main {
-            padding: 3em 10%;
-            color: #333;
-        }
-        main h2.accent {
-            color: #6dcff6;
-            margin-bottom: 0.5em;
-        }
+    /* Main Content Styles */
+    main {
+      padding: 3em 10%;
+      color: #333;
+    }
+    main h2.accent {
+      color: #6dcff6;
+      margin-bottom: 0.5em;
+    }
+    main p {
+      margin-bottom: 1em;
+    }
 
-        /* Form Styles */
-        fieldset {
-            margin-top: 1em;
-        }
-        legend {
-            font-weight: bold;
-            color: #6dcff6;
-        }
-        form input[type="file"] {
-            margin-bottom: 1em;
-        }
-        form button {
-            background-color: #6dcff6;
-            color: #fff;
-            border: none;
-            padding: 0.5em 1em;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        form button:hover {
-            background-color: #4fb0d4;
-        }
+    /* Form Styles */
+    fieldset {
+      margin-top: 1em;
+      border: 2px solid #6dcff6;
+      border-radius: 4px;
+      padding: 1em;
+    }
+    legend {
+      font-weight: bold;
+      color: #6dcff6;
+    }
+    form label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: #333;
+    }
+    form input[type="text"],
+    form input[type="email"] {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 1.5em;
+      background-color: #6dcff6;
+      color: #ffffff;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    form button:hover {
+      background-color: #4fb0d4;
+    }
 
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: #ffffff;
-            text-align: center;
-            padding: 1em;
-            font-size: 0.9em;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons i {
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        .social-icons i:hover {
-            color: #6dcff6;
-        }
-    </style>
-    <script>
-        $(document).ready(function() {
-            $('#uploadForm').submit(function(e) {
-                e.preventDefault(); // Prevent default form submission
-                var formData = new FormData(this);
-
-                $.ajax({
-                    url: 'upload_file',  // Adjust if you have a different endpoint
-                    type: 'POST',
-                    data: formData,
-                    success: function(data) {
-                        alert("Thank you! The file has been uploaded successfully. We will keep you in mind for future opportunities.");
-                    },
-                    cache: false,
-                    contentType: false,
-                    processData: false
-                });
-            });
-        });
-    </script>
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #ffffff;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .social-icons i:hover {
+      color: #6dcff6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo">
-            <div>
-                <h1>Kilovolt</h1>
-                <p class="accent">Innovating the Future of Power Engineering</p>
-            </div>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Our Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="images/Kilovolt Logo.jpg" alt="Kilovolt Engineering Logo" />
+      <div>
+        <h1>Kilovolt</h1>
+        <p class="accent">Innovating the Future of Power Engineering</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <h2 class="accent">Careers</h2>
-        <p>Currently, there are no career opportunities available. We are a growing company and encourage you to check back at a later date for possible openings.</p>
-        <p>If you'd like to submit your resume for future consideration, please use the form below:</p>
-        
-        <fieldset class="accent-border">
-            <legend>Upload Resume</legend>
-            <form action="upload_file" method="post" enctype="multipart/form-data" id="uploadForm">
-                <input type="file" name="file" accept=".pdf,.doc,.docx" required>
-                <br>
-                <button type="submit">Upload</button>
-            </form>
-        </fieldset>
-        <div id="message"></div>
-    </main>
+  <main>
+    <h2 class="accent">Careers</h2>
+    <p>Currently, there are no open positions. We’re growing and encourage you to check back later for opportunities.</p>
+    <p>If you’d like to submit your resume for future consideration, please complete the form below. When you click “Send Resume,” your default email client will open—simply attach your resume and send.</p>
 
-    <footer>
-        <p>Copyright © 2023, Kilovolt Engineering LLC. All rights reserved.</p>
-        <div class="social-icons">
-            <i class="fab fa-facebook fa-2x"></i>
-            <i class="fab fa-linkedin fa-2x"></i>
-        </div>
-    </footer>
+    <fieldset class="accent-border">
+      <legend>Submit Your Resume</legend>
+      <form action="mailto:kilovoltengineering@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <button type="submit">Send Resume</button>
+      </form>
+    </fieldset>
+  </main>
+
+  <footer>
+    <p>Copyright © 2023, Kilovolt Engineering LLC. All rights reserved.</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook fa-2x"></i>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </div>
+  </footer>
 </body>
 </html>
